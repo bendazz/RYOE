@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RYOE Lookup</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>RYOE Lookup</h1>
+      <p class="subtitle">Type a player's name to see their yards_above_expected.</p>
+
+      <div class="search-box">
+        <label for="player-input">Player</label>
+        <input id="player-input" type="text" autocomplete="off" placeholder="Start typing e.g. A.Davis" />
+        <div id="suggestions" class="suggestions" hidden></div>
+      </div>
+
+      <div id="result" class="result" aria-live="polite"></div>
+
+      <section class="divider"></section>
+
+      <div class="filters">
+        <div class="filter">
+          <label for="min-rushes">Minimum rushes</label>
+          <input id="min-rushes" type="number" min="1" step="1" placeholder="e.g., 10" />
+        </div>
+      </div>
+
+      <div id="top10" class="top10" aria-live="polite"></div>
+
+      <footer>
+        <small>Data source: RYOE.csv in this repo</small>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
